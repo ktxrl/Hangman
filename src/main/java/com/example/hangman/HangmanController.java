@@ -16,8 +16,8 @@ import java.util.ResourceBundle;
 
 public class HangmanController implements Initializable {
     @FXML
-    private Label answer;
-    private String random;
+    private Label textLabel;
+    private String secretWord;
     @FXML
     private ImageView image;
     private int count;
@@ -25,6 +25,7 @@ public class HangmanController implements Initializable {
     private TextField inputText;
     private final List<String> words = new ArrayList<>();
     private Random r = new Random();
+    private String revealedWord;
 
     public HangmanController() {
         words.add("Alligator");
@@ -39,30 +40,28 @@ public class HangmanController implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        answer.setText(random);
+        textLabel.setText(encodeTheWord());
         if (getClass().getResourceAsStream("/images/0.png") != null) {
             Image image1 = new Image(getClass().getResourceAsStream("/Images/0.png"));
             image.setImage(image1);
             count++;
         }
+        revealedWord = encodeTheWord();
+        System.out.println(secretWord);
     }
 
     public void pickARandomWord() {
         int number = r.nextInt(words.size());
-        random = words.get(number);
+        secretWord = words.get(number);
     }
 
     public String encodeTheWord() {
-        // alligator => _________
-        // bear => ____
-
-        //regex== rgular expression
-        return "_ ".repeat(random.length());
+        return "_".repeat(secretWord.length());
     }
     @FXML
     public void buttonClicked() {
         String input = inputText.getText();
-        if (!random.contains(input)) {
+        if (!secretWord.contains(input)) {
             File imageFolder = new File("src/main/resources/Images");
             if (count < imageFolder.listFiles().length) {
                 String phrase = "/Images/" + count + ".png";
@@ -71,7 +70,15 @@ public class HangmanController implements Initializable {
                 count++;
             }
         } else {
-
+            int index = secretWord.indexOf(input.charAt(0));
+            revealedWord = revealedWord.substring(0, index) + input.charAt(0) + revealedWord.substring(index + 1);
+            textLabel.setText(revealedWord);
         }
     }
 }
+// did not fix two or more of the same letter
+// victory / defeat menu
+// only allow user to enter one letter
+// make input not case sensitive
+// make app nicer
+// tests?

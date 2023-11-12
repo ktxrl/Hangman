@@ -19,6 +19,6 @@
          <Insets />
       </VBox.margin>
    </HBox>
-   <Label fx:id="answer" text="Label" />
+   <Label fx:id="textLabel" text="Label" />
    <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
 </VBox>
