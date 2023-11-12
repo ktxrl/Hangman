@@ -11,21 +11,22 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class HangmanController implements Initializable {
     @FXML
     private Label answer;
     private String random;
     @FXML
     private ImageView image;
-    private int count = 0;
-    private File imageFolder;
+    private int count;
     @FXML
     private TextField inputText;
     private final List<String> words = new ArrayList<>();
+    private Random r = new Random();
 
-    public HelloController() {
+    public HangmanController() {
         words.add("Alligator");
         words.add("Bear");
         words.add("Cheetah");
@@ -47,7 +48,7 @@ public class HelloController implements Initializable {
     }
 
     public void pickARandomWord() {
-        int number = (int) Math.random() * words.size();
+        int number = r.nextInt(words.size());
         random = words.get(number);
     }
 
@@ -62,7 +63,7 @@ public class HelloController implements Initializable {
     public void buttonClicked() {
         String input = inputText.getText();
         if (!random.contains(input)) {
-            imageFolder = new File("src/main/resources/Images");
+            File imageFolder = new File("src/main/resources/Images");
             if (count < imageFolder.listFiles().length) {
                 String phrase = "/Images/" + count + ".png";
                 Image image1 = new Image(getClass().getResourceAsStream(phrase));
