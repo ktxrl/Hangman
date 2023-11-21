@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7665672b-62b8-4086-a353-47616213d584" name="Changes" comment="changed names">
+      <change afterPath="$PROJECT_DIR$/src/test/java/test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hangman/HangmanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hangman/HangmanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hangman/hangman.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hangman/hangman.fxml" afterDir="false" />
+    </list>
+    <list id="3efab5fb-92f4-4f21-829f-b72591000114" name="Changes by zheka" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hangman/HangmanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hangman/HangmanController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,12 +18,38 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/com/example/hangman/HangmanController.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="38" end1="39" start2="40" end2="40" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="40" end1="41" start2="41" end2="41" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="42" end1="43" start2="42" end2="43" changelist="3efab5fb-92f4-4f21-829f-b72591000114" />
+        <range start1="48" end1="49" start2="48" end2="49" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="50" end1="50" start2="50" end2="51" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="54" end1="55" start2="55" end2="56" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="57" end1="58" start2="58" end2="59" changelist="3efab5fb-92f4-4f21-829f-b72591000114" />
+        <range start1="62" end1="63" start2="63" end2="65" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="72" end1="74" start2="74" end2="79" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="77" end1="77" start2="82" end2="93" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="78" end1="82" start2="94" end2="94" changelist="7665672b-62b8-4086-a353-47616213d584" />
+        <range start1="84" end1="84" start2="96" end2="97" changelist="7665672b-62b8-4086-a353-47616213d584" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,23 +68,23 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ryanl\IdeaProjects\Hangman\src\main\resources\Images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HangmanApplication">
+  <component name="RunManager" selected="JUnit.test1.encodeWorksFine">
     <configuration name="HangmanApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.hangman.HangmanApplication" />
       <module name="Hangman" />
@@ -80,8 +111,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test1.encodeWorksFine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hangman" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test1" />
+      <option name="METHOD_NAME" value="encodeWorksFine" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.test1.encodeWorksFine" />
         <item itemvalue="Application.HangmanApplication" />
         <item itemvalue="Application.HelloApplication" />
       </list>
@@ -124,7 +166,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699799968520</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed names">
+      <created>1699801611267</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699801611267</updated>
+    </task>
+    <task id="LOCAL-00006" summary="changed names">
+      <created>1699801657808</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699801657808</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,5 +221,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Hangman$test1_encodeWorksFine.ic" NAME="test1.encodeWorksFine Coverage Results" MODIFIED="1700406145482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -1,5 +1,7 @@
 package com.example.hangman;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -36,9 +38,7 @@ public class HangmanController implements Initializable {
         words.add("Honda");
         words.add("Football");
         pickARandomWord();
-
     }
-
     public void initialize(URL url, ResourceBundle resourceBundle) {
         textLabel.setText(encodeTheWord());
         if (getClass().getResourceAsStream("/images/0.png") != null) {
@@ -46,13 +46,14 @@ public class HangmanController implements Initializable {
             image.setImage(image1);
             count++;
         }
-        revealedWord = encodeTheWord();
+        revealedWord = encodeTheWord(secretWord);
         System.out.println(secretWord);
+        addTextLimiter(inputText, 1);
     }
 
     public void pickARandomWord() {
         int number = r.nextInt(words.size());
-        secretWord = words.get(number);
+        secretWord = words.get(number).toLowerCase();
     }
 
     public String encodeTheWord() {
@@ -60,7 +61,8 @@ public class HangmanController implements Initializable {
     }
     @FXML
     public void buttonClicked() {
-        String input = inputText.getText();
+
+        String input = inputText.getText().toLowerCase();
         if (!secretWord.contains(input)) {
             File imageFolder = new File("src/main/resources/Images");
             if (count < imageFolder.listFiles().length) {
@@ -70,15 +72,26 @@ public class HangmanController implements Initializable {
                 count++;
             }
         } else {
-            int index = secretWord.indexOf(input.charAt(0));
-            revealedWord = revealedWord.substring(0, index) + input.charAt(0) + revealedWord.substring(index + 1);
+            for (int i = 0; i < secretWord.length(); i++) {
+                if (secretWord.charAt(i) == input.charAt(0)) {
+                    revealedWord = revealedWord.substring(0, i) + input.charAt(0) + revealedWord.substring(i + 1);
+                }
+            }
             textLabel.setText(revealedWord);
         }
     }
+    public static void addTextLimiter(final TextField tf, final int maxLength) {
+        tf.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(final ObservableValue<? extends String> ov, final String oldValue, final String newValue) {
+                if (tf.getText().length() > maxLength) {
+                    String s = tf.getText().substring(0, maxLength);
+                    tf.setText(s);
+                }
+            }
+        });
+    }
 }
-// did not fix two or more of the same letter
-// victory / defeat menu
-// only allow user to enter one letter
-// make input not case sensitive
 // make app nicer
 // tests?
+// victory / defeat menu
