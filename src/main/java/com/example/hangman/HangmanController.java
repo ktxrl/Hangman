@@ -40,7 +40,7 @@ public class HangmanController implements Initializable {
         pickARandomWord();
     }
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        textLabel.setText(encodeTheWord());
+        textLabel.setText(encodeTheWord(secretWord));
         if (getClass().getResourceAsStream("/images/0.png") != null) {
             Image image1 = new Image(getClass().getResourceAsStream("/Images/0.png"));
             image.setImage(image1);
@@ -56,7 +56,7 @@ public class HangmanController implements Initializable {
         secretWord = words.get(number).toLowerCase();
     }
 
-    public String encodeTheWord() {
+    public String encodeTheWord(String secretWord) {
         return "_".repeat(secretWord.length());
     }
     @FXML
